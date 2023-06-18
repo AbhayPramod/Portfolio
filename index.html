@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compaatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfile</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1fb1feb467.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Image Assets/ap.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Summary</a></li>
+                <li><a href="#">My Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Abhay Pramod</p>
+            <h6>Game Developer</h6>
+            <h1>Hello, I am <span>Abhay</span><br>From India</h1>
+        </div>
+    </div>
+</div>
+
+<!-- ------about------- -->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Image Assets/controller2.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Cupiditate illum labore iure. Labore inventore iusto ipsam, a adipisci aperiam? 
+                    Iste inventore a fuga illum nisi quam labore eum nulla optio! Lorem ipsum, dolor 
+                    sit amet consectetur adipisicing elit. Nam laboriosam soluta tempore! Odio, non debitis eveniet, 
+                    eaque mollitia fugit quam accusantium earum illum totam quas. Dignissimos ipsa repellendus commodi illo. 
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda aut natus fugit maxime rerum? Dolorum 
+                    dolorem voluptates deleniti sapiente soluta aspernatur nobis necessitatibus. Temporibus dolore 
+                    aspernatur cum odit, molestiae nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex 
+                    temporibus, voluptatum consequatur asperiores, perferendis, fuga maxime quam esse repellendus tempora porro 
+                    fugit nulla accusantium! Reprehenderit officiis nemo nulla quas incidunt!Lorem
+                </p>
+                <div class="tab-titles">
+                    <div class="tab-links active-link" onclick="openTab('skills')">Skills</div>
+                    <div class="tab-links" onclick="openTab('experience')">Experience</div>
+                    <div class="tab-links" onclick="openTab('education')">Education</div>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Unity3D/2D</span><br>Game development in unity game engine (Intermediate)</li>
+                        <li><span>Blender</span><br>3D modelling and design (Begginer)</li>
+                        <li><span>UI/UX</span><br>Designing Game/App interfaces</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Apr-May 2023</span><br>Internship at Infosys</li>
+                        <li><span>Jan-Apr 2023</span><br>iOS app development training (Swift storyboard)</li>
+                        <li><span>Oct-Dec 2022</span><br>iOS design thinking bootcamp</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">                        
+                    <ul>
+                        <li><span>2012-2020</span><br>Delhi Public School, Gurugram</li>
+                        <li><span>2020-2024</span><br>SRM Institute of Science and Tehnology, KTR Campus</li>
+                    </ul>
+                </div>                    
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- --------------------------portfolio--------------------------- -->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Image Assets/hcrace.png">
+                <div class="layer">
+                    <h3>Hill Racing (Mock)</h3>
+                    <p>
+                        A replica of the game Hill Climb racing, where player must reach the objective in given time.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Image Assets/logo.png">
+                <div class="layer">
+                    <h3>Hardcore Parkour</h3>
+                    <p>
+                        you play as a pakour specialist freestyling in the environment around you.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Image Assets/gg.png">
+                <div class="layer">
+                    <h3>Wallmart Mario</h3>
+                    <p>
+                        A replica of the game Super mario, a starter project to learn gamedev.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn"><p>See More</p></a>
+    </div>
+</div>
+
+<!-- --------------social media---------------- -->
+
+
+<div id="social-media">
+    <div class="container">
+        <div class="m-links">
+            <a href="#" class="media"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="media"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="media"><i class="fa-brands fa-twitter"></i></a>
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links")            
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    
+    function openTab(tabName){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabName).classList.add("active-tab")
+    }
+
+/*what the above code does is it creates a function
+called opentab that goes through the tabnames and
+contents to see which one is active and removes the active
+class from the class list. Then it checks which tabname
+called the function and puts the active class in that class list.*/ 
+
+</script>
+
+</body>
+</html>
